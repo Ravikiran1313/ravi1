@@ -17,3 +17,12 @@ then
 else
     echo "installed successfully"
 fi
+
+yum install git -y
+
+if [ $? -ne 0 ]
+then
+    echo "Error while installing"
+else
+    echo "installed successfully"
+fi
