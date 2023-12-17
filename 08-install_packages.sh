@@ -10,7 +10,7 @@ Y="\e[33m"
 N="\e[0m"
 
 VALIDATE(){
-    if ( $1 -ne 0 )
+    if [ $1 -ne 0 ]
     then 
         echo -e "$R error::while $2"
         exit 1
@@ -19,7 +19,7 @@ VALIDATE(){
     fi       
 }
 
-if ( $ID -ne 0 )
+if [ $ID -ne 0 ]
 then 
     echo -e "$R error:: your are not a root user"
     exit 1
@@ -30,7 +30,7 @@ fi
 for package in $@
 do
     yum list installed $package &>> $LOGFILE
-    if( $? -ne 0 )
+    if [ $? -ne 0 ]
     then   
         yum install $package -y &>> $LOGFILE
         VALIDATE $? instalation_$package
