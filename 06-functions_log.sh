@@ -6,6 +6,7 @@ VALIDATE(){
     if [ $? -ne 0 ]
 then
     echo "Error while installing"
+    exit 1
 else
     echo "installed successfully"
 fi
@@ -14,6 +15,7 @@ fi
 if [ $ID -ne 0 ]
 then
     echo "you are not a root user"
+    exit 1
 else
     echo "you are a root user"    
 fi
