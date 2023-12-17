@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 R="\e[31m"
 G="\e[32m"
@@ -30,9 +32,9 @@ do
     yum list installed $package &>> $LOGFILE
     if( $package -ne 0 )
     then   
-        yum install $package -y &>> LOGFILE
+        yum install $package -y &>> $LOGFILE
         VALIDATE $? install_package
     else
-        echo -e "$Y package already installed"
+        echo -e "$Y $package  already installed"
     fi
 done    
