@@ -12,7 +12,8 @@ VALIDATE(){
     then 
         echo -e "$R error::while $2"
     else 
-        echo -e "$G sucessfully $2"    
+        echo -e "$G sucessfully $2" 
+    fi       
 }
 
 if ( $ID -ne 0 )
