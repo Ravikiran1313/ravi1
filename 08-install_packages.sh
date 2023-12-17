@@ -35,3 +35,4 @@ do
     else
         echo -e "$Y package already installed"
     fi
+done    
