@@ -2,6 +2,15 @@
 
 ID=$(id -u)
 
+VALIDATE(){
+    if [ $? -ne 0 ]
+then
+    echo "Error while installing"
+else
+    echo "installed successfully"
+fi
+}
+
 if [ $ID -ne 0 ]
 then
     echo "you are not a root user"
@@ -11,18 +20,8 @@ fi
 
 yum install mysql -y
 
-if [ $? -ne 0 ]
-then
-    echo "Error while installing"
-else
-    echo "installed successfully"
-fi
+VALIDATE
 
 yum install git -y
 
-if [ $? -ne 0 ]
-then
-    echo "Error while installing"
-else
-    echo "installed successfully"
-fi
+VALIDATE
