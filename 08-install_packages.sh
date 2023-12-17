@@ -11,6 +11,7 @@ VALIDATE(){
     if ( $1 -ne 0 )
     then 
         echo -e "$R error::while $2"
+        exit 1
     else 
         echo -e "$G sucessfully $2" 
     fi       
@@ -19,6 +20,7 @@ VALIDATE(){
 if ( $ID -ne 0 )
 then 
     echo -e "$R error:: your are not a root user"
+    exit 1
 else 
     echo -e "$G your a root user" 
 fi    
