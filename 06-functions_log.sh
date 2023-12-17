@@ -16,3 +16,4 @@ then
     echo "Error while installing"
 else
     echo "installed successfully"
+fi
