@@ -2,7 +2,7 @@
 
 ID=$(id -u)
 
-TIMESTAMP=$(date +%F -%H -%M -%S)
+TIMESTAMP=$(date +% -%H-%M-%S)
 LOGFILE="/tmp/$0_$TIMESTAMP.log"
 
 VALIDATE(){
