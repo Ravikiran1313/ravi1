@@ -8,7 +8,7 @@ then
     echo "Error::$2"
     exit 1
 else
-    echo "installed successfully"
+    echo "$2 successfully"
 fi
 }
 
