@@ -2,8 +2,8 @@
 
 ID=$(id -u)
 
-TIMESTAMP=$(date)
-LOGFILE="$0_$TIMESTAMP.log"
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE="/tmp/$0_$TIMESTAMP.log"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
