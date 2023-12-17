@@ -17,10 +17,11 @@ VALIDATE(){
 }
 
 if ( $ID -ne 0 )
-    then 
-        echo -e "$R error:: your are not a root user"
-    else 
-        echo -e "$G your a root user" 
+then 
+    echo -e "$R error:: your are not a root user"
+else 
+    echo -e "$G your a root user" 
+fi    
 
 for package in $@
 do
@@ -31,3 +32,4 @@ do
         VALIDATE $? install_package
     else
         echo -e "$Y package already installed"
+    fi
